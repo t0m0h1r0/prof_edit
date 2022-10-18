@@ -6,6 +6,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
 yourName = 'hogehoge'
+csv_file = 'gp-search-20221016-125053.csv'
+
 options = webdriver.ChromeOptions()
 options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 driver = webdriver.Chrome(options=options)
@@ -22,7 +24,7 @@ inv = "form-component__typeahead-cta-ember79"
 save = "ember88"
 
 
-df = pd.read_csv('gp-search-20221016-125053.csv',skiprows=1)
+df = pd.read_csv(csv_file,skiprows=1)
 for l,x  in df.sort_values(by="priority date").iterrows():
 	x_inventors = str(x['inventor/author']).replace(', ',',').split(',')
 	x_inventors.remove(yourName)
