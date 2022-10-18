@@ -15,7 +15,7 @@ from selenium.webdriver.common.by import By
 
 
 yourName = 'hogehoge'
-yourId = 'tomohiro-kawaguchi-055567124'
+yourId = 'first-last-012345678'
 csv_file = 'gp-search-20221016-125053.csv'
 
 
