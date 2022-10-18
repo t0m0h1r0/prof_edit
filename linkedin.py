@@ -7,21 +7,22 @@ from selenium.webdriver.common.by import By
 
 '''
 事前準備
-* 自身の特許での名前をyourNameに設定
+* 特許に記載された自身の名前をyourNameに設定
+* 自身のLinkedinアカウントのIDをyourIdに設定
 * Google patentよりCSV形式で特許査定済みのリストをダウンロードし、csv_filenameにファイル名を設定
 * Chromeを--remote-debugging-port=9222オプションで起動の上、Liinkedinログインを行う
 '''
 
 
 yourName = 'hogehoge'
+yourId = 'tomohiro-kawaguchi-055567124'
 csv_file = 'gp-search-20221016-125053.csv'
-ident = 'tomohiro-kawaguchi-055567124'
 
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 driver = webdriver.Chrome(options=options)
-url = "https://www.linkedin.com/in/"+ident+"/edit/forms/patent/new/?profileFormEntryPoint=PROFILE_COMPLETION_HUB"
+url = "https://www.linkedin.com/in/"+yourId+"/edit/forms/patent/new/?profileFormEntryPoint=PROFILE_COMPLETION_HUB"
 
 inputItems = {
 	"title":"single-line-text-form-component-profileEditFormElement-PATENT-profilePatent-ACoAAB6x0YEB0RnQyX4Ja2B4-pWzaC54ZP1o8DQ-1-title",
