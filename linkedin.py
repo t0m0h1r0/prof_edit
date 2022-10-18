@@ -15,12 +15,13 @@ from selenium.webdriver.common.by import By
 
 yourName = 'hogehoge'
 csv_file = 'gp-search-20221016-125053.csv'
+ident = 'tomohiro-kawaguchi-055567124'
 
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 driver = webdriver.Chrome(options=options)
-url = "https://www.linkedin.com/in/tomohiro-kawaguchi-055567124/edit/forms/patent/new/?profileFormEntryPoint=PROFILE_COMPLETION_HUB"
+url = "https://www.linkedin.com/in/"+ident+"/edit/forms/patent/new/?profileFormEntryPoint=PROFILE_COMPLETION_HUB"
 
 inputItems = {
 	"title":"single-line-text-form-component-profileEditFormElement-PATENT-profilePatent-ACoAAB6x0YEB0RnQyX4Ja2B4-pWzaC54ZP1o8DQ-1-title",
