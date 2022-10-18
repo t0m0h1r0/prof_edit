@@ -5,8 +5,17 @@ import chromedriver_binary
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
+'''
+事前準備
+* 自身の特許での名前をyourNameに設定
+* Google patentよりCSV形式で特許査定済みのリストをダウンロードし、csv_filenameにファイル名を設定
+* Chromeを--remote-debugging-port=9222オプションで起動の上、Liinkedinログインを行う
+'''
+
+
 yourName = 'hogehoge'
 csv_file = 'gp-search-20221016-125053.csv'
+
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
